@@ -69,23 +69,32 @@ Copy the link to your Pavlovia task. For example:
 Add **?** to start the query string, add the field name **id** followed by **=**:
 `https://run.pavlovia.org/your-task/?id=`
 
-Add the piped text corresponding to the field "id" (**${e://Field/id}**):
-`https://run.pavlovia.org/your-task/?id={e://Field/id}`
+Add the piped text corresponding to the field "id" (**\${e://Field/id}**):
+`https://run.pavlovia.org/your-task/?id=${e://Field/id}`
 
 Add **&** and do the same for the field "group":
-`https://run.pavlovia.org/your-task/?id={e://Field/id}&group=${e://Field/group}`
+`https://run.pavlovia.org/your-task/?id=${e://Field/id}&group=${e://Field/group}`
 
 *Optional: Transform into a hyperlink* [[details here]](https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/rich-content-editor/insert-a-hyperlink/)
 
 <img src="./img/hyperlink.png" width="800">
 
 
-## Set experiment info in Pavlovia/PsychoPy to get info from query string [need to finish this part]
+## Make sure the experiment on Pavlovia can get the information from the query string
+
+Open your experiment in the PsychoPy Builder, go to **Experiment Settings** (gear wheel icon), tab **Basic** and add the fields `id` and `group` to the **Experiment info**
+
+<img src="./img/psychopy.png" width="800">
+
+Save the experiment, export to HTML and make it active on Pavlovia if necessary
 
 
-## Do a test [need to modify this part]
+## Do a test
 
-1. Access Qualtrics survey using the URL with query string
-2. Click on the link to go to the online experiment on Pavlovia
-3. If set properly, participant and group should be pre-filled (pp01 and 2, respectively)
-4. Try to change the field values of `id` and `group` in the initial Qualtrics URL and see what happens when redirected to Pavlovia
+1. Access Qualtrics survey using the URL with query string: `https://survey.qualtrics.com/jfe/form/SV_123456789?id=pp01&group=2`
+2. Click on the link to go to the online Pavlovia experiment
+3. If set properly, you should see the participant ID and the group appended at the end of the URL (here `https://run.pavlovia.org/your-task/?id=pp01&group=2`)
+
+<img src="./img/pavlovia-url.png" width="800">
+
+4. Try to change the field values of **id** and **group** in the initial Qualtrics URL (e.g., `https://survey.qualtrics.com/jfe/form/SV_123456789?id=participant123&group=456`) and see what happens to the URL directing to Pavlovia
