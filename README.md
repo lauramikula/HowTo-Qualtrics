@@ -6,4 +6,4 @@ A few tutorials to set up online surveys using Qualtrics
 
 [3. Use Qualtrics libraries](./03_libraries/libraries.md)
 
-[4. Create multiple part surveys](./04_multipart_survey/multipart_survey.md)
+[4. Add date selection questions](./04_date_selection/date_selection.md)
