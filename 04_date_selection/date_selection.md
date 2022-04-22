@@ -98,7 +98,7 @@ Right now the question is not intelligent about month lengths and leap years. Mo
 <img src="./img/method2-6.png" width="750">
 
 Copy and paste the following code:
-**/!\ On the first line: Don't forget to match the variable `firstYearoption` to the first choice option you have for 'Year'.**
+**/!\ On the first line: Don't forget to match the variable `firstYearoption` to the first choice option you have for 'Year' (2019 here).**
 
 ``` js
 /* ---------------------- Set common parameters ---------------------- */
